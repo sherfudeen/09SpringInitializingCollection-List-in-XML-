@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id="triangle" class="org.sherfu.java.Triangle">
+
+	<property name="points" >
+	<list>
+		<ref bean="pointa" />
+		<ref bean="pointb" />
+		<ref bean="pointc" />
+	</list> 
+	</property> 
+</bean>
+
+<bean id="pointa" class="org.sherfu.java.Point">
+	<property name="x" value="0" /> 
+	<property name="y" value="0" /> 
+</bean>
+<bean id="pointb" class="org.sherfu.java.Point">
+	<property name="x" value="120" /> 
+	<property name="y" value="10" /> 
+</bean>
+<bean id="pointc" class="org.sherfu.java.Point">
+	<property name="x" value="30" /> 
+	<property name="y" value="20" /> 
+</bean>
+
+<!--  
+	<property name="type" value="Trio" /> 
+	<constructor-arg index="0" value="Trios"/>
+	<constructor-arg index="1" value="20"/>
+-->
+	
+<!--  
+<bean id="triangle" class="org.sherfu.java.Triangle">
+	<property name="pointA" ref="pointa" /> 
+	<property name="pointB">
+		<bean class="org.sherfu.java.Point">
+			<property name="x" value="40" /> 
+			<property name="y" value="20" /> 
+		</bean>
+	</property> 
+	<property name="pointC">
+		<bean class="org.sherfu.java.Point">
+			<property name="x" value="20" /> 
+			<property name="y" value="40" /> 
+		</bean>
+	</property> 
+</bean>
+
+<bean id="pointa" class="org.sherfu.java.Point">
+	<property name="x" value="0" /> 
+	<property name="y" value="0" /> 
+</bean>
+
+
+<bean id="pointb" class="org.sherfu.java.Point">
+	<property name="x" value="20" /> 
+	<property name="y" value="0" /> 
+</bean>
+
+<bean id="pointc" class="org.sherfu.java.Point">
+	<property name="x" value="0" /> 
+	<property name="y" value="20" /> 
+</bean>
+
+-->
+
+</beans>
